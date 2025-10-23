@@ -29,7 +29,7 @@ public class ShowActivityTest {
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Edmonton"));
         onView(withId(R.id.button_confirm)).perform(click());
         onView(withText("Edmonton")).perform(click());
-        onView(withId(R.id.textView_cityName)).check(matches(isDisplayed()));
+        onView(withId(R.id.cityName)).check(matches(isDisplayed()));
     }
 
     @Test
@@ -38,7 +38,7 @@ public class ShowActivityTest {
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Vancouver"));
         onView(withId(R.id.button_confirm)).perform(click());
         onView(withText("Vancouver")).perform(click());
-        onView(withId(R.id.textView_cityName)).check(matches(withText("Vancouver")));
+        onView(withId(R.id.cityName)).check(matches(withText("Vancouver")));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class ShowActivityTest {
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Tokyo"));
         onView(withId(R.id.button_confirm)).perform(click());
         onView(withText("Tokyo")).perform(click());
-        onView(withId(R.id.button_back)).perform(click());
+        onView(withId(R.id.backButton)).perform(click());
         onView(withId(R.id.city_list)).check(matches(isDisplayed()));
     }
 }

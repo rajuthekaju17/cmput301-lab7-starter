@@ -14,14 +14,14 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
 
-        TextView cityNameView = findViewById(R.id.textView_cityName);
-        Button backButton = findViewById(R.id.button_back);
+        TextView cityView = findViewById(R.id.cityName);
+        Button backBtn = findViewById(R.id.backButton);
         Intent intent = getIntent();
         String cityName = intent.getStringExtra("city_name");
 
-        cityNameView.setText(cityName);
+        cityView.setText(cityName);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
